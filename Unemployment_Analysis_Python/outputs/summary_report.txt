@@ -1,0 +1,22 @@
+UNEMPLOYMENT ANALYSIS REPORT
+==================================================
+
+Top 5 States with Highest Unemployment:
+
+Region
+Tripura             28.350357
+Haryana             26.283214
+Jharkhand           20.585000
+Bihar               18.918214
+Himachal Pradesh    18.540357
+Name: Estimated Unemployment Rate (%), dtype: float64
+
+Top 5 Labour Participation States:
+
+Region
+Tripura      61.823929
+Meghalaya    57.080741
+Telangana    53.002500
+Gujarat      46.101071
+Sikkim       46.070000
+Name: Estimated Labour Participation Rate (%), dtype: float64
