@@ -4,6 +4,8 @@
 
 ### 🚀 AI Powered Email & SMS Spam Detection using Machine Learning and NLP
 
+🌐 **Live Demo:** https://email-spam-detector-isrx.onrender.com
+
 Detect whether an Email or SMS is **Spam** or **Genuine (Ham)** using
 **Natural Language Processing (NLP)**, **TF-IDF Vectorization**, and
 **Multinomial Naive Bayes Classification**.
