@@ -17,10 +17,10 @@ def predict_flower(
             petal_width
         ]],
         columns=[
-            "SepalLengthCm",
-            "SepalWidthCm",
-            "PetalLengthCm",
-            "PetalWidthCm"
+            "Sepal Length (Cm)",
+            "Sepal Width (Cm)",
+            "Petal Length (Cm)",
+            "Petal Width (Cm)"
         ]
     )
 

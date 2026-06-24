@@ -19,7 +19,16 @@ st.set_page_config(
 
 model = joblib.load("models/iris_model.pkl")
 
-iris_df = pd.read_csv("data/Iris.csv")
+@st.cache_data
+def load_data():
+    df = pd.read_csv("data/Iris.csv")
+
+    if "Id" in df.columns:
+        df.drop("Id", axis=1, inplace=True)
+
+    return df
+
+iris_df = load_data()
 
 if "Id" in iris_df.columns:
     iris_df.drop("Id", axis=1, inplace=True)
@@ -146,15 +155,14 @@ if predict_btn:
             petal_width
         ]],
         columns=[
-            "SepalLengthCm",
-            "SepalWidthCm",
-            "PetalLengthCm",
-            "PetalWidthCm"
+            "Sepal Length (Cm)",
+            "Sepal Width (Cm)",
+            "Petal Length (Cm)",
+            "Petal Width (Cm)"
         ]
     )
 
     prediction = model.predict(sample)[0]
-
     probabilities = model.predict_proba(sample)[0]
 
     col1, col2 = st.columns([1, 1.3])
@@ -215,10 +223,10 @@ if predict_btn:
 
         chart_df = pd.DataFrame({
             "Feature": [
-                "Sepal Length",
-                "Sepal Width",
-                "Petal Length",
-                "Petal Width"
+                "Sepal Length (Cm)",
+                "Sepal Width (Cm)",
+                "Petal Length (Cm)",
+                "Petal Width (Cm)"
             ],
             "Value": [
                 sepal_length,
